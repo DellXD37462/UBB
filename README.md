@@ -26,7 +26,7 @@ HP:NewButton("Mythical Heath", "Recommended to use before battle", function()
     local args = {
     [1] = "DamageTaken",
     [2] = false,
-    [3] = -9999999999
+    [3] = -inf
 }
 
 game:GetService("ReplicatedStorage").Functions:FireServer(unpack(args))
@@ -35,6 +35,10 @@ end)
 
 OS:NewButton("Infinity Yield", "Execute Infinity Yield", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
+end)
+
+OS:NewButton("[PATCHED] Undertale Boss Battles by xxDeziQxx", "Execute xxDeziQxx's UBB Script", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/xxDeziQxx/UndertaleBossBattles/main/ByxxDeziQxx'))()
 end)
 
 ply:NewSlider("WalkSpeed", "Is this even useful?", 250, 0, function(s) -- 250 (MaxValue) | 0 (MinValue)
