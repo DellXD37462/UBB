@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Ding Undertale Boss Battles GUI 69", "Ocean")
+local Window = Library.CreateLib("Ding 69 Undertale Boss Battles GUI", "Ocean")
 
 local Tab = Window:NewTab("Main Game")
 local Tab2 = Window:NewTab("Other")
@@ -26,7 +26,7 @@ HP:NewButton("Mythical Heath", "Recommended to use before battle", function()
     local args = {
     [1] = "DamageTaken",
     [2] = false,
-    [3] = -inf
+    [3] = -99999999
 }
 
 game:GetService("ReplicatedStorage").Functions:FireServer(unpack(args))
