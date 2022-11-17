@@ -26,7 +26,7 @@ HP:NewButton("Mythical Heath", "Recommended to use before battle", function()
     local args = {
     [1] = "DamageTaken",
     [2] = false,
-    [3] = -99999999
+    [3] = -99999999999999
 }
 
 game:GetService("ReplicatedStorage").Functions:FireServer(unpack(args))
