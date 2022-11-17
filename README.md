@@ -13,7 +13,7 @@ local Cred2 = Cred:NewSection("Credits")
 
 Boss:NewButton("InstaKill (READ DESC)", "Only works in battle and must use in a private server.", function()
     local args = {
-    [1] = "FatalBlaster",
+    [1] = "ErrorBlaster",
     [2] = workspace.Game.Mobs.Dummy,
     [3] = 696969696969696969
 }
@@ -43,6 +43,14 @@ end)
 
 ply:NewSlider("WalkSpeed", "Is this even useful?", 250, 0, function(s) -- 250 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+ply:NewToggle("Super Jump", "Makes you jump 3 times higher", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 150
+    else
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
 end)
 
 Cred2:NewLabel("Thanks to Kavo Libary for making the GUI Script")
