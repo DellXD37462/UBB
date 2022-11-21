@@ -29,10 +29,6 @@ HP:NewButton("Mythical Heath", "Recommended to use before battle", function()
     [3] = -99999999999999
 }
 
-HP:NewButton("God Mode", "Cannot take damage", function()
-  workspace.DellKrittat555_Dev.KR:Destroy()
-end)
-
 OS:NewButton("Infinity Yield", "Execute Infinity Yield", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
 end)
