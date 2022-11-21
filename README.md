@@ -26,8 +26,12 @@ HP:NewButton("Mythical Heath", "Recommended to use before battle", function()
     local args = {
     [1] = "DamageTaken",
     [2] = false,
-    [3] = -99999999999999
+    [3] = -999999999
 }
+
+game:GetService("ReplicatedStorage").Functions:FireServer(unpack(args))
+
+end)
 
 OS:NewButton("Infinity Yield", "Execute Infinity Yield", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
