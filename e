@@ -1,0 +1,94 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+local Window = Rayfield:CreateWindow({
+	Name = "Ding 69 Undertale Boss Battles GUI",
+	LoadingTitle = "Loading...",
+	LoadingSubtitle = "Loading GUI Script :D",
+	ConfigurationSaving = {
+		Enabled = true,
+		FolderName = nil, -- Create a custom folder for your hub/game
+		FileName = "Save"
+	},
+        Discord = {
+        	Enabled = false,
+        	Invite = "sirius", -- The Discord invite code, do not include discord.gg/
+        	RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+        },
+	KeySystem = true, -- Set this to true to use our key system
+	KeySettings = {
+		Title = "User Verification",
+		Subtitle = "This script is not ready",
+		Note = "How did you get this script",
+		FileName = "GUIKey",
+		SaveKey = true,
+		GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+		Key = "DingDongDrang555"
+	}
+})
+
+local MainTab = Window:CreateTab("Main", 7485051733) -- Title, Image
+
+local Keybind = MainTab:CreateKeybind({
+	Name = "Insta-Kill",
+	CurrentKeybind = "F",
+	HoldToInteract = false,
+	Flag = "Keybind1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Keybind)
+        local args = {
+            [1] = "ErrorBlaster",
+            [2] = workspace.Game.Mobs.Dummy,
+            [3] = 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+        }
+        
+        game:GetService("ReplicatedStorage").BlasterShoot:FireServer(unpack(args))
+	end,
+})
+
+local Button = MainTab:CreateButton({
+	Name = "Ignore KR",
+	Callback = function()
+		local player = game.Players.LocalPlayer
+		local character = player.Character or player.CharacterAdded:wait()
+		local KR = player.Character.KR
+
+		KR:Destroy()
+	end,
+})
+
+local Button = MainTab:CreateButton({
+	Name = "Add INF HP to the boss",
+	Callback = function()
+		local args = {
+            [1] = "ErrorBlaster",
+            [2] = workspace.Game.Mobs.Dummy,
+            [3] = -999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+        }
+        
+        game:GetService("ReplicatedStorage").BlasterShoot:FireServer(unpack(args))
+	end,
+})
+
+local Button = MainTab:CreateButton({
+	Name = "Overpowered Heal",
+	Callback = function()
+		local args = {
+			[1] = "DamageTaken",
+			[2] = false,
+			[3] = -999999999
+		}
+		
+		game:GetService("ReplicatedStorage").Functions:FireServer(unpack(args))
+	end,
+})
+
+local Button = MainTab:CreateButton({
+	Name = "Remove Dodges",
+	Callback = function()
+		local Dodge = game.Workspace.Game.Mobs.Dummy.Dodges
+		local ODodge = game.Workspace.Game.Mobs.Dummy.OriginalDodges
+
+		Dodge.Value = -1
+		ODodge.Value = -1
+	end,
+})
+
