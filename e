@@ -26,7 +26,7 @@ local Window = Rayfield:CreateWindow({
 	}
 })
 
-local MainTab = Window:CreateTab("Main", 7485051733) -- Title, Image
+local MainTab = Window:CreateTab("Main", 11364050499) -- Title, Image
 
 local Keybind = MainTab:CreateKeybind({
 	Name = "Insta-Kill",
@@ -69,26 +69,43 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
-	Name = "Overpowered Heal",
+	Name = "INF HP (Doesn't work with KR Bosses)",
 	Callback = function()
 		local args = {
 			[1] = "DamageTaken",
 			[2] = false,
-			[3] = -999999999
+			[3] = -99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
 		}
 		
 		game:GetService("ReplicatedStorage").Functions:FireServer(unpack(args))
 	end,
 })
 
-local Button = MainTab:CreateButton({
-	Name = "Remove Dodges",
-	Callback = function()
-		local Dodge = game.Workspace.Game.Mobs.Dummy.Dodges
-		local ODodge = game.Workspace.Game.Mobs.Dummy.OriginalDodges
+local Keybind = MainTab:CreateKeybind({
+	Name = "Insta-Kill",
+	CurrentKeybind = "G",
+	HoldToInteract = false,
+	Flag = "Keybind2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Keybind)
+        local ForceField = game.Workspace.Game.Mobs.Dummy.ForceField
 
-		Dodge.Value = -1
-		ODodge.Value = -1
+		ForceField:Destroy()
+	end,
+})
+
+local ExTab = Window:CreateTab("Extras", 1039338174) -- Title, Image
+
+local Button = ExTab:CreateButton({
+	Name = "Infinity Yield",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
+	end,
+})
+
+local Button = ExTab:CreateButton({
+	Name = "Patched Dexi's GUI",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/xxDeziQxx/UndertaleBossBattles/main/ByxxDeziQxx", true))()
 	end,
 })
 
