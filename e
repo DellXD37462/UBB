@@ -56,6 +56,15 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
+	Name = "Ignore BR",
+	Callback = function()
+		local BR = player.Character.BR
+
+		KR:Destroy()
+	BR,
+})
+
+local Button = MainTab:CreateButton({
 	Name = "Add INF HP to the boss",
 	Callback = function()
 		local args = {
