@@ -58,10 +58,12 @@ local Button = MainTab:CreateButton({
 local Button = MainTab:CreateButton({
 	Name = "Ignore BR",
 	Callback = function()
+		local player = game.Players.LocalPlayer
+		local character = player.Character or player.CharacterAdded:wait()
 		local BR = player.Character.BR
 
-		KR:Destroy()
-	BR,
+		BR:Destroy()
+	end,
 })
 
 local Button = MainTab:CreateButton({
