@@ -34,10 +34,10 @@ local Keybind = MainTab:CreateKeybind({
 	HoldToInteract = false,
 	Flag = "Keybind1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
 	Callback = function(Keybind)
-                local enemy = workspace.Game.Mobs.Dummy
-	        local Humanoid = enemy.Enemy
+        local enemy = workspace.Game.Mobs.Dummy
+	    local Humanoid = enemy.Enemy
 
-                enemy.Health = 0
+        enemy.Health = 0
 })
 
 local Button = MainTab:CreateButton({
