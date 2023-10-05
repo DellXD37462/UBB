@@ -1,4 +1,4 @@
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
 	Name = "Ding 69 Undertale Boss Battles GUI",
@@ -119,4 +119,3 @@ local Button = ExTab:CreateButton({
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/xxDeziQxx/UndertaleBossBattles/main/ByxxDeziQxx", true))()
 	end,
 })
-
